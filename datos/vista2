@@ -1,0 +1,3 @@
+SELECT max(fecha) as fecha, concat("Venta #",venta) as descripcion,sum(monto) as monto,'v' as tipo, venta as id FROM cuenta  where venta <> 0 group by venta
+UNION
+select fecha,descripcion,monto,'i' as tipo,venta from cuenta WHERE venta = 0 

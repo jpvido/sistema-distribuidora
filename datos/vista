@@ -1,0 +1,4 @@
+create view movimientos_cuentas as
+SELECT max(c.fecha) as fecha,cli.nombre as descripcion, sum(c.monto) as monto FROM cuenta c inner join cliente cli on cli.id = cliente 
+group by c.id
+order by c.monto DESC
