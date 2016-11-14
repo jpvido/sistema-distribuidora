@@ -9,7 +9,7 @@ if ($_POST){
 
     //$result = mysql_query("select * from usuarios where user='".$user."' and pass = md5('".$pass."')");  
 
-    if ($user=='admin' and $pass=='1234' ){
+    if ($user=='admin' and $pass=='GusTavo' ){
         $_SESSION["XuserID"] = 'admin';
         header("location:index.php");
     }else{
